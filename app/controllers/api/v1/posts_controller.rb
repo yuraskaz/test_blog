@@ -11,7 +11,8 @@ module Api
       end
 
       def create
-        @post = @user.posts.new(post_params)
+        
+        @post = @user.posts.new(post_params)   
         
         if @post.save
           render json: @post, status: :created
